@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /app/bootstrap.php.cache
 /app/cache/*
 !app/cache/.gitkeep
@@ -10,6 +11,8 @@
 /vendor/
 /web/bundles/
 
+=======
+>>>>>>> 2c57a52ca72161d40492bd325e7dced970666bb3
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
 *.iml
