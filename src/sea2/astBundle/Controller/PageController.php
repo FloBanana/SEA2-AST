@@ -34,8 +34,12 @@ class PageController extends Controller
         $track = $em->getRepository('sea2astBundle:Track')
             ->getLatestTrack(1);
 
+        $notifications = $em->getRepository('sea2astBundle:Notification')
+            ->getNotificationsForUser(1);
+
         return $this->render('sea2astBundle:Page:index.html.twig', array(
-            'track' => $track
+            'track' => $track,
+            'notifications' => $notifications
         ));
     }
 	

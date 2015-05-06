@@ -53,10 +53,17 @@ class User
     private $tracks;
 
     /**
+     * @var Collection
+     * @ORM\OneToMany(targetEntity="sea2\astBundle\Entity\Notification", mappedBy="user")
+     */
+    private $notifications;
+
+    /**
      * Constructor
      */
     public function __construct() {
         $this->tracks = new ArrayCollection();
+        $this->notifications = new ArrayCollection();
     }
 
     /**
@@ -192,5 +199,38 @@ class User
     public function getTracks()
     {
         return $this->tracks;
+    }
+
+    /**
+     * Add notifications
+     *
+     * @param \sea2\astBundle\Entity\Notification $notifications
+     * @return User
+     */
+    public function addNotification(\sea2\astBundle\Entity\Notification $notifications)
+    {
+        $this->notifications[] = $notifications;
+
+        return $this;
+    }
+
+    /**
+     * Remove notifications
+     *
+     * @param \sea2\astBundle\Entity\Notification $notifications
+     */
+    public function removeNotification(\sea2\astBundle\Entity\Notification $notifications)
+    {
+        $this->notifications->removeElement($notifications);
+    }
+
+    /**
+     * Get notifications
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getNotifications()
+    {
+        return $this->notifications;
     }
 }
