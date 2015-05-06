@@ -1,0 +1,45 @@
+{% extends 'sea2astBundle::layout.html.twig' %}
+
+{% block page_title %}
+	AST - Tracks
+{% endblock %}
+
+{% block page_header %}
+	Tracks
+{% endblock %}
+
+{% block page_subheader %}
+	
+{% endblock %}
+
+{% block body %}
+    <div class="box">
+        <div class="box-header">
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            <table class="table table-striped">
+                <tr>
+                    <th>Date</th>
+                    <th>Starttime</th>
+                    <th>Endtime</th>
+                    <th>Length</th>
+                    <th>Duration</th>
+                    <th>Actions</th>
+                </tr>
+                {% for track in tracks %}
+                    <tr>
+                        <td>{{ track.date }}</td>
+                        <td>{{ track.starttime }}h</td>
+                        <td>{{ track.endtime }}h</td>
+                        <td>{{ track.length }}km</td>
+                        <td>{{ track.duration }}h</td>
+                        <td><a href="{{ path('sea2astTrackShow', {'id': track.id}) }}"><i class="fa fa-edit"> </i></a>   <a href="#"><i class="fa fa-trash-o"> </i></a></td>
+                    </tr>
+                {% else %}
+                {% endfor %}
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div><!-- /.box -->
+{% endblock %}

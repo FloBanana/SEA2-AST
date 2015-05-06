@@ -1,0 +1,7 @@
+sea2ast:
+    resource: "@sea2astBundle/Resources/config/routing.xml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
