@@ -68,8 +68,21 @@
                 <h3 class="box-title">Map</h3>
             </div>
             <div class="box-body">
-                <div class="gpxview:{{ asset('gpx/' ~ track.trackXML) }}:Karte" style="width:auto;height:300px">
+                <div id="map" class="gpxview:{{ asset('gpx/' ~ track.trackXML) }}:Karte" style="width:auto;height:300px">
                     <noscript><p>Zum Anzeigen der Karte wird Javascript benötigt.</p></noscript>
+                </div>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+
+        <div class="box box-primary">
+            <div class="box-header">
+                <h3 class="box-title">Time/Distance Diagram</h3>
+            </div>
+            <div class="box-body">
+                <div id="map_vp" style="width:auto;height:300px">
+                    <noscript>
+                        <p>Zum Anzeigen des Geschwindigkeitsprofils gegen den Weg wird Javascript benötigt.</p>
+                    </noscript>
                 </div>
             </div><!-- /.box-body -->
         </div><!-- /.box -->

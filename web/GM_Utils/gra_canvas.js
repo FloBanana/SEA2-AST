@@ -45,7 +45,7 @@ JB.gra = function(gradiv) {
  } // punkt
  this.ver_linie=function(x,y1,y2,c) {
   this.linie(x,y1,x,y2,c);
- } // ver_linie
+ } // ver_liniemap_vp
  this.hor_linie=function(x1,x2,y,c) {
   this.linie(x1,y,x2,y,c);
  } // hor_linie

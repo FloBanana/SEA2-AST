@@ -78,7 +78,7 @@ JB.GPX2GM.units.air =  {
 };
 
 JB.GPX2GM.strings = {};
-JB.GPX2GM.strings.de = {
+JB.GPX2GM.strings.en = {
 	lenght: "L\u00e4nge",
 	way: "Strecke",
 	tstart: "Startzeit",
@@ -105,7 +105,7 @@ JB.GPX2GM.strings.de = {
 	rtes: "Routen",
 	inmo: "in Bewegung"
 }
-JB.GPX2GM.strings.en = {
+JB.GPX2GM.strings.de = {
 	lenght: "Length",
 	way: "Way",
 	tstart: "Start time",

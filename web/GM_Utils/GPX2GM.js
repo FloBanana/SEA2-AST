@@ -102,10 +102,10 @@ JB.setgc = function() {
 	JB.gc.vglatt = (typeof(Vglatt)!="undefined") ? Vglatt : false;
 	JB.gc.tdiff = (typeof(Tdiff)!="undefined") ? Tdiff : 0; // in Stunden
 	JB.gc.maxzoomemove = (typeof(Maxzoomemove)!="undefined") ? Maxzoomemove : 30; // 1 ... , 30: aus
-	JB.gc.plotframecol = (typeof(Plotframecol)!="undefined") ? Plotframecol : "black";
-	JB.gc.plotgridcol = (typeof(Plotgridcol)!="undefined") ? Plotgridcol : "gray";
-	JB.gc.plotlabelcol = (typeof(Plotlabelcol)!="undefined") ? Plotlabelcol : "black";
-	JB.gc.plotmarkercol = (typeof(Plotmarkercol)!="undefined") ? Plotmarkercol : "black";
+	JB.gc.plotframecol = (typeof(Plotframecol)!="undefined") ? Plotframecol : "grey";
+	JB.gc.plotgridcol = (typeof(Plotgridcol)!="undefined") ? Plotgridcol : "white";
+	JB.gc.plotlabelcol = (typeof(Plotlabelcol)!="undefined") ? Plotlabelcol : "grey";
+	JB.gc.plotmarkercol = (typeof(Plotmarkercol)!="undefined") ? Plotmarkercol : "grey";
 	JB.gc.profilfillopac = (typeof(Profilfillopac)!="undefined") ? Profilfillopac : 0; //   0 ... 1, 0:aus
 	JB.gc.trcolmod = (typeof(Trcolmod)!="undefined") ? Trcolmod : ""; // h s v hr cad
 	JB.gc.tcols = ["#ff0000","#00ff00","#0000ff","#aaaa00","#ff00ff","#00ffff","#000000"]; // Trackfarben in #rrggbb für rot grün blau
