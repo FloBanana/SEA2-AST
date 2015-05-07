@@ -40,6 +40,9 @@ class TrackRepository extends EntityRepository
     public function getLatestTrack($userId)
     {
         $tracks = $this->getTracksForUser($userId);
-        return $tracks[0];
+        if($tracks != null){
+            return $tracks[0];
+        }
+        return null;
     }
 }

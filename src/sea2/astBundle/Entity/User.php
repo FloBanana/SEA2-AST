@@ -2,6 +2,7 @@
 
 namespace sea2\astBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection,
     Doctrine\Common\Collections\ArrayCollection;
@@ -10,9 +11,9 @@ use Doctrine\Common\Collections\Collection,
  * Class User
  * @package sea2\astBundle\Entity
  * @ORM\Entity
- * @ORM\Table(name="user")
+ * @ORM\Table(name="fos_user")
  */
-class User
+class User extends BaseUser
 {
     /**
      * @var integer
@@ -20,48 +21,25 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", length=255)
-     */
-    private $username;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", length=255)
-     */
-    private $firstname;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", length=255)
-     */
-    private $lastname;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", length=255)
-     */
-    private $password;
+    protected $id;
 
     /**
      * @var Collection
      * @ORM\OneToMany(targetEntity="sea2\astBundle\Entity\Track", mappedBy="user")
      */
-    private $tracks;
+    protected $tracks;
 
     /**
      * @var Collection
      * @ORM\OneToMany(targetEntity="sea2\astBundle\Entity\Notification", mappedBy="user")
      */
-    private $notifications;
+    protected $notifications;
 
     /**
      * Constructor
      */
     public function __construct() {
+        parent::__construct();
         $this->tracks = new ArrayCollection();
         $this->notifications = new ArrayCollection();
     }

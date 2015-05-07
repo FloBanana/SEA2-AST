@@ -15,10 +15,6 @@
     <route id="sea2astTracks" path="/tracks">
         <default key="_controller">sea2astBundle:Page:tracks</default>
     </route>
-	
-    <route id="sea2astLogin" path="/login">
-        <default key="_controller">sea2astBundle:Page:login</default>
-    </route>
 
     <route id="sea2astTrackShow" path="/track/{id}">
         <default key="_controller">sea2astBundle:Page:track</default>

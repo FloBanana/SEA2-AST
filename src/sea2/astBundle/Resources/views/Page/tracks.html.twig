@@ -27,17 +27,19 @@
                     <th>Duration</th>
                     <th>Actions</th>
                 </tr>
-                {% for track in tracks %}
-                    <tr>
-                        <td>{{ track.date }}</td>
-                        <td>{{ track.starttime }}h</td>
-                        <td>{{ track.endtime }}h</td>
-                        <td>{{ track.length }}km</td>
-                        <td>{{ track.duration }}h</td>
-                        <td><a href="{{ path('sea2astTrackShow', {'id': track.id}) }}"><i class="fa fa-edit"> </i></a>   <a href="#"><i class="fa fa-trash-o"> </i></a></td>
-                    </tr>
-                {% else %}
-                {% endfor %}
+                {% if tracks %}
+                    {% for track in tracks %}
+                        <tr>
+                            <td>{{ track.date }}</td>
+                            <td>{{ track.starttime }}h</td>
+                            <td>{{ track.endtime }}h</td>
+                            <td>{{ track.length }}km</td>
+                            <td>{{ track.duration }}h</td>
+                            <td><a href="{{ path('sea2astTrackShow', {'id': track.id}) }}"><i class="fa fa-edit"> </i></a>   <a href="#"><i class="fa fa-trash-o"> </i></a></td>
+                        </tr>
+                    {% else %}
+                    {% endfor %}
+                {% endif %}
             </table>
         </div>
         <!-- /.box-body -->
