@@ -49,7 +49,7 @@ JB.setgc = function() {
 	JB.gc.showmaptypecontroll = (typeof(Showmaptypecontroll)!="undefined") ? Showmaptypecontroll : true;
 	JB.gc.scrollwheelzoom = (typeof(Scrollwheelzoom)!="undefined") ? Scrollwheelzoom : true;
 	JB.gc.fullscreenbutton = (typeof(Fullscreenbutton)!="undefined") ? Fullscreenbutton : false;
-	JB.gc.legende = (typeof(Legende)!="undefined") ? Legende : true;
+	JB.gc.legende = (typeof(Legende)!="undefined") ? Legende : false;
 	JB.gc.legende_fnm = (typeof(Legende_fnm)!="undefined") ? Legende_fnm  : true;
 	JB.gc.legende_rr = (typeof(Legende_rr)!="undefined") ? Legende_rr  : true;
 	JB.gc.legende_trk = (typeof(Legende_trk)!="undefined") ? Legende_trk : true;
